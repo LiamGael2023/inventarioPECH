@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /
+RewriteBase /inventariopech/
 
 # Redirigir todo a index.php excepto archivos existentes
 RewriteCond %{REQUEST_FILENAME} !-f

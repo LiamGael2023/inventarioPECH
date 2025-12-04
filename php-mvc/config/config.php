@@ -7,7 +7,7 @@
 // Configuración de la aplicación
 define('APP_NAME', 'Sistema de Inventario ANA');
 define('APP_VERSION', '1.0.0');
-define('APP_URL', 'http://localhost/inventario-ana');
+define('APP_URL', 'http://localhost/inventariopech');
 
 // Configuración de base de datos
 define('DB_HOST', 'localhost');
