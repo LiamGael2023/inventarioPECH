@@ -157,6 +157,7 @@
             ?>
             <pre>APP_URL: <?php echo APP_URL; ?>
 DB_HOST: <?php echo DB_HOST; ?>
+DB_PORT: <?php echo DB_PORT; ?>
 DB_NAME: <?php echo DB_NAME; ?>
 DB_USER: <?php echo DB_USER; ?></pre>
         <?php endif; ?>
@@ -168,7 +169,7 @@ DB_USER: <?php echo DB_USER; ?></pre>
     $dbError = '';
     if ($configExists) {
         try {
-            $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
+            $dsn = "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
             $pdo = new PDO($dsn, DB_USER, DB_PASS, [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             ]);
