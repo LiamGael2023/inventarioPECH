@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirigir todo a index.php excepto archivos existentes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Deshabilitar listado de directorios
+Options -Indexes
+
+# Configuración de errores
+php_flag display_errors Off
+php_flag log_errors On
+
+# Configuración de charset
+AddDefaultCharset UTF-8
